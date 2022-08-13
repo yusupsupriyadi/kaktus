@@ -4,7 +4,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "tailwindcss -i ./src/input.css -o ./css/style.css --watch"
+    "watch": "tailwindcss -i ./src/input.css -o ./css/style.css --watch",
+    "minify": "npx tailwindcss -i ./src/input.css -o ./css/build.css --minify"
   },
   "devDependencies": {
     "prettier": "^2.7.1",
