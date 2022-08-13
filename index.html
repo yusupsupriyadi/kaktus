@@ -1,340 +1,453 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="assets/fontawesome/css/all.css" />
+    <link
+      rel="stylesheet"
+      href="assets/fontawesome/webfonts/fa-solid-900.ttf"
+    />
+    <link rel="icon" type="image/gif/png" href="images/icon.png" />
+    <title>kaktus</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="assets/fontawesome/css/all.css" />
-  <link rel="stylesheet" href="assets/fontawesome/webfonts/fa-solid-900.ttf" />
-  <link rel="icon" type="image/gif/png" href="images/icon.png" />
-  <title>kaktus</title>
-</head>
-
-<body class="bg-[#f5f3e6]">
-  <div>
-    <section id="navbar" class="container px-8 md:px-20 mx-auto">
-      <nav class="border-b-[1px] border-green-900/10">
-        <div class="container flex flex-wrap justify-between items-center mx-auto">
-          <a class="flex items-center cursor-default">
-            <img src="images/icon.png" class="mr-3 h-6 sm:h-9" alt="Flowbite Logo" />
-            <span class="self-center text-xl font-bold whitespace-nowrap">Kaktus</span>
-          </a>
-          <button data-collapse-toggle="navbar-default" type="button"
-            class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden focus:outline-none focus:ring-2 focus:ring-gray-200 dark:hover:bg-gray-700"
-            aria-controls="navbar-default" aria-expanded="false">
-            <span class="sr-only">Open main menu</span>
-            <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd"
-                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-                clip-rule="evenodd"></path>
-            </svg>
-          </button>
-          <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-            <ul
-              class="flex items-center flex-col p-4 mt-4 rounded-lg border border-gray-100 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0">
-              <li>
-                <a href="#"
-                  class="block py-2 pr-4 pl-3 text-white rounded bg-transparent md:text-green-600 md:p-0 text-md font-semibold"
-                  aria-current="page">Home</a>
-              </li>
-              <li>
-                <a href="#"
-                  class="block py-2 pr-4 pl-3 text-gray-700 rounded md:border-0 hover:text-green-600 md:p-0 text-md font-semibold">About</a>
-              </li>
-              <li>
-                <a href="#"
-                  class="block py-2 pr-4 pl-3 text-gray-700 rounded md:border-0 hover:text-green-600 md:p-0 text-md font-semibold">Services</a>
-              </li>
-              <li>
-                <a href="#"
-                  class="block py-2 pr-4 pl-3 text-gray-700 rounded md:border-0 hover:text-green-600 md:p-0 text-md font-semibold">Pricing</a>
-              </li>
-              <li>
-                <button class="bg-green-500 px-4 py-2 text-md text-white rounded-2xl hover:bg-green-600">
-                  Contact
-                </button>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </section>
-
-    <section id="main-header">
-      <div class="container px-8 md:px-20 pt-12 mx-auto md:flex md:justify-between items-center">
-        <div class="m-auto w-72 relative md:hidden main-img">
-          <img src="images/main-img.png" alt="" />
-          <div class="absolute top-24 right-1 rotate-45 rounded-full flex">
-            <lottie-player src="json/love-lottie.json" background="transparent" speed="1"
-              style="width: 30px; height: 30px" bounce loop autoplay class="m-auto"></lottie-player>
-          </div>
-        </div>
-
-        <div class="mt-8">
-          <div id="title-mobile" class="block md:hidden">
-            <h1 class="text-4xl md:text-6xl font-semibold text-green-900">
-              Let the environment be green🪴
-            </h1>
-            <div class="flex items-center my-6">
-              <div>
-                <h1 class="text-2xl pr-4 border-r-2 font-semibold text-green-600">
-                  29$
-                </h1>
-              </div>
-              <div>
-                <p class="pl-4 text-sm text-black font-semibold desc-title"></p>
-              </div>
-            </div>
-            <div class="flex items-center">
-              <div
-                class="p-2 px-4 mr-2 bg-yellow-600 rounded-full mt-4 shadow-2xl hover:scale-110 hover:border-b-0 duration-100 cursor-pointer btn-buy">
-                <span class="font-bold text-white">Buy Now</span>
-              </div>
-              <div
-                class="p-2 px-4 bg-white rounded-full mt-4 shadow-2xl hover:scale-110 hover:border-b-0 duration-100 cursor-pointer btn-learn">
-                <span class="font-bold text-black">Learn More</span>
-              </div>
+  <body class="bg-[#f5f3e6]">
+    <div>
+      <section id="navbar" class="container mx-auto px-8 md:px-20">
+        <nav class="border-b-[1px] border-green-900/10">
+          <div
+            class="container mx-auto flex flex-wrap items-center justify-between"
+          >
+            <a class="flex cursor-default items-center">
+              <img
+                src="images/icon.png"
+                class="mr-3 h-6 sm:h-9"
+                alt="Flowbite Logo"
+              />
+              <span class="self-center whitespace-nowrap text-xl font-bold"
+                >Kaktus</span
+              >
+            </a>
+            <button
+              data-collapse-toggle="navbar-default"
+              type="button"
+              class="ml-3 inline-flex items-center rounded-lg p-2 text-sm text-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:hover:bg-gray-700 md:hidden"
+              aria-controls="navbar-default"
+              aria-expanded="false"
+            >
+              <span class="sr-only">Open main menu</span>
+              <svg
+                class="h-6 w-6"
+                aria-hidden="true"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </button>
+            <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+              <ul
+                class="mt-4 flex flex-col items-center rounded-lg border border-gray-100 p-4 md:mt-0 md:flex-row md:space-x-8 md:border-0 md:text-sm md:font-medium"
+              >
+                <li>
+                  <a
+                    href="#"
+                    class="text-md block rounded bg-transparent py-2 pr-4 pl-3 font-semibold text-white md:p-0 md:text-green-600"
+                    aria-current="page"
+                    >Home</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="text-md block rounded py-2 pr-4 pl-3 font-semibold text-gray-700 hover:text-green-600 md:border-0 md:p-0"
+                    >About</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="text-md block rounded py-2 pr-4 pl-3 font-semibold text-gray-700 hover:text-green-600 md:border-0 md:p-0"
+                    >Services</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="text-md block rounded py-2 pr-4 pl-3 font-semibold text-gray-700 hover:text-green-600 md:border-0 md:p-0"
+                    >Pricing</a
+                  >
+                </li>
+                <li>
+                  <button
+                    class="text-md rounded-2xl bg-green-500 px-4 py-2 text-white hover:bg-green-600"
+                  >
+                    Contact
+                  </button>
+                </li>
+              </ul>
             </div>
           </div>
+        </nav>
+      </section>
 
-          <div id="title-destop" class="hidden md:block mx-auto">
-            <h1 class="text-4xl md:text-6xl font-semibold text-green-900">
-              Let the <br />
-              environment <br />
-              be green🪴
-            </h1>
-            <div class="flex items-center my-12">
-              <div>
-                <h1 class="text-3xl pr-4 border-r-2 font-semibold text-green-600">
-                  29$
-                </h1>
-              </div>
-              <div>
-                <p class="pl-4 text-md text-black font-semibold desc-title"></p>
-              </div>
-            </div>
-
-            <div class="flex items-center">
-              <div
-                class="p-4 px-6 mr-4 bg-yellow-600 rounded-full mt-4 shadow-2xl hover:scale-110 hover:border-b-0 duration-100 cursor-pointer btn-buy">
-                <span class="font-bold text-white">Buy Now</span>
-              </div>
-              <div
-                class="p-4 px-6 bg-white rounded-full mt-4 shadow-2xl hover:scale-110 hover:border-b-0 duration-100 cursor-pointer btn-learn">
-                <span class="font-bold text-black">Learn More</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="hidden md:flex items-center">
-          <div class="m-auto w-96 relative main-img rounded-full drop-shadow-xl">
+      <section id="main-header">
+        <div
+          class="container mx-auto items-center px-8 pt-12 md:flex md:justify-between md:px-20"
+        >
+          <div class="main-img relative m-auto w-72 md:hidden">
             <img src="images/main-img.png" alt="" />
-            <div class="absolute top-24 right-0 rotate-45 rounded-full flex">
-              <lottie-player src="json/love-lottie.json" background="transparent" speed="1"
-                style="width: 30px; height: 30px" bounce loop autoplay class="m-auto"></lottie-player>
+            <div class="absolute top-24 right-1 flex rotate-45 rounded-full">
+              <lottie-player
+                src="json/love-lottie.json"
+                background="transparent"
+                speed="1"
+                style="width: 30px; height: 30px"
+                bounce
+                loop
+                autoplay
+                class="m-auto"
+              ></lottie-player>
             </div>
           </div>
 
-          <div class="hidden md:block ml-24 mt-10 cursor-pointer">
-            <div class="hover:scale-110 duration-300">
-              <div id="sunlight" class="py-5 px-6 rounded-xl bg-white flex items-center shadow-lg">
-                <div class="text-lg p-2 bg-orange-100 rounded-full mr-4 flex">
-                  <i class="text-orange-500 fa-solid fa-sun"></i>
+          <div class="mt-8">
+            <div id="title-mobile" class="block md:hidden">
+              <h1 class="text-4xl font-semibold text-green-900 md:text-6xl">
+                Let the environment be green🪴
+              </h1>
+              <div class="my-6 flex items-center">
+                <div>
+                  <h1
+                    class="border-r-2 pr-4 text-2xl font-semibold text-green-600"
+                  >
+                    29$
+                  </h1>
                 </div>
                 <div>
-                  <h2 class="text-lg font-bold text-yellow-600">Sunlight</h2>
-                  <p class="mt-1 font-semibold text-slate-500">4 to 5 hours</p>
+                  <p
+                    class="desc-title pl-4 text-sm font-semibold text-black"
+                  ></p>
+                </div>
+              </div>
+              <div class="flex items-center">
+                <div
+                  class="btn-buy mr-2 mt-4 cursor-pointer rounded-full bg-yellow-600 p-2 px-4 shadow-2xl duration-100 hover:scale-110 hover:border-b-0"
+                >
+                  <span class="font-bold text-white">Buy Now</span>
+                </div>
+                <div
+                  class="btn-learn mt-4 cursor-pointer rounded-full bg-white p-2 px-4 shadow-2xl duration-100 hover:scale-110 hover:border-b-0"
+                >
+                  <span class="font-bold text-black">Learn More</span>
                 </div>
               </div>
             </div>
 
-            <div class="hover:scale-110 duration-300 cursor-pointer">
-            <div id="Humidity" class="mt-8 py-5 px-6 rounded-xl bg-white flex items-center shadow-lg">
-              <div class="text-lg p-2 bg-orange-100 rounded-full mr-4 flex">
-                <i class="text-orange-500 fa-solid fa-water"></i>
+            <div id="title-destop" class="mx-auto hidden md:block">
+              <h1 class="text-4xl font-semibold text-green-900 md:text-6xl">
+                Let the <br />
+                environment <br />
+                be green🪴
+              </h1>
+              <div class="my-12 flex items-center">
+                <div>
+                  <h1
+                    class="border-r-2 pr-4 text-3xl font-semibold text-green-600"
+                  >
+                    29$
+                  </h1>
+                </div>
+                <div>
+                  <p
+                    class="text-md desc-title pl-4 font-semibold text-black"
+                  ></p>
+                </div>
               </div>
-              <div>
-                <h2 class="text-lg font-bold text-yellow-600">Humidity</h2>
-                <p class="mt-1 font-semibold text-slate-500">86%</p>
+
+              <div class="flex items-center">
+                <div
+                  class="btn-buy mr-4 mt-4 cursor-pointer rounded-full bg-yellow-600 p-4 px-6 shadow-2xl duration-100 hover:scale-110 hover:border-b-0"
+                >
+                  <span class="font-bold text-white">Buy Now</span>
+                </div>
+                <div
+                  class="btn-learn mt-4 cursor-pointer rounded-full bg-white p-4 px-6 shadow-2xl duration-100 hover:scale-110 hover:border-b-0"
+                >
+                  <span class="font-bold text-black">Learn More</span>
+                </div>
               </div>
             </div>
           </div>
 
-          <div class="hover:scale-110 duration-300 cursor-pointer">
-            <div id="Watering" class="mt-8 py-5 px-6 rounded-xl bg-white flex items-center shadow-lg">
-              <div class="text-lg p-2 bg-orange-100 rounded-full mr-4 flex">
-                <i class="text-orange-500 fa-solid fa-droplet"></i>
-              </div>
-              <div>
-                <h2 class="text-lg font-bold text-yellow-600">Watering</h2>
-                <p class="mt-1 font-semibold text-slate-500">1 in 7 days</p>
+          <div class="hidden items-center md:flex">
+            <div
+              class="main-img relative m-auto w-96 rounded-full drop-shadow-xl"
+            >
+              <img src="images/main-img.png" alt="" />
+              <div class="absolute top-24 right-0 flex rotate-45 rounded-full">
+                <lottie-player
+                  src="json/love-lottie.json"
+                  background="transparent"
+                  speed="1"
+                  style="width: 30px; height: 30px"
+                  bounce
+                  loop
+                  autoplay
+                  class="m-auto"
+                ></lottie-player>
               </div>
             </div>
-          </div>
+
+            <div class="ml-24 mt-10 hidden cursor-pointer md:block">
+              <div class="duration-300 hover:scale-110">
+                <div
+                  id="sunlight"
+                  class="flex items-center rounded-xl bg-white py-5 px-6 shadow-lg"
+                >
+                  <div class="mr-4 flex rounded-full bg-orange-100 p-2 text-lg">
+                    <i class="fa-solid fa-sun text-orange-500"></i>
+                  </div>
+                  <div>
+                    <h2 class="text-lg font-bold text-yellow-600">Sunlight</h2>
+                    <p class="mt-1 font-semibold text-slate-500">
+                      4 to 5 hours
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="cursor-pointer duration-300 hover:scale-110">
+                <div
+                  id="Humidity"
+                  class="mt-8 flex items-center rounded-xl bg-white py-5 px-6 shadow-lg"
+                >
+                  <div class="mr-4 flex rounded-full bg-orange-100 p-2 text-lg">
+                    <i class="fa-solid fa-water text-orange-500"></i>
+                  </div>
+                  <div>
+                    <h2 class="text-lg font-bold text-yellow-600">Humidity</h2>
+                    <p class="mt-1 font-semibold text-slate-500">86%</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="cursor-pointer duration-300 hover:scale-110">
+                <div
+                  id="Watering"
+                  class="mt-8 flex items-center rounded-xl bg-white py-5 px-6 shadow-lg"
+                >
+                  <div class="mr-4 flex rounded-full bg-orange-100 p-2 text-lg">
+                    <i class="fa-solid fa-droplet text-orange-500"></i>
+                  </div>
+                  <div>
+                    <h2 class="text-lg font-bold text-yellow-600">Watering</h2>
+                    <p class="mt-1 font-semibold text-slate-500">1 in 7 days</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section id="main-2" class="bg-[#3b130c] mt-32 md:mt-36 bottom-0">
-      <div class="container px-8 md:px-20 py-8 md:py-4 mx-auto md:h-52 md:relative">
-        <div class="md:flex items-end md:absolute md:-top-[50px]">
-          <div
-            class="border-b-[1px] border-orange-800/50 md:border-b-0 pb-4 md:pb-0 flex item-center md:items-end mb-8 md:mb-0">
-            <div class="md:border-r-2 md:border-orange-800/50 md:pr-20 md:mr-20">
-              <h1 class="text-3xl text-slate-50 font-semibold">
-                Shop Plants
-              </h1>
-              <p class="text-lg text-slate-200 font-medium mt-2 md:hidden">
-                Discover the best air purifying plants
-              </p>
-              <p class="text-lg text-slate-200 font-medium mt-2 hidden md:block">
-                Discover the best air <br />
-                purifying plants
-              </p>
+      <section id="main-2" class="bottom-0 mt-32 bg-[#3b130c] md:mt-36">
+        <div
+          class="container mx-auto px-8 py-8 md:relative md:h-52 md:px-20 md:py-4"
+        >
+          <div class="items-end md:absolute md:-top-[50px] md:flex">
+            <div
+              class="item-center mb-8 flex border-b-[1px] border-orange-800/50 pb-4 md:mb-0 md:items-end md:border-b-0 md:pb-0"
+            >
+              <div
+                class="md:mr-20 md:border-r-2 md:border-orange-800/50 md:pr-20"
+              >
+                <h1 class="text-3xl font-semibold text-slate-50">
+                  Shop Plants
+                </h1>
+                <p class="mt-2 text-lg font-medium text-slate-200 md:hidden">
+                  Discover the best air purifying plants
+                </p>
+                <p
+                  class="mt-2 hidden text-lg font-medium text-slate-200 md:block"
+                >
+                  Discover the best air <br />
+                  purifying plants
+                </p>
+              </div>
             </div>
-          </div>
 
-          <div class="flex items-end">
-            <div class="w-28 md:w-40">
-              <img src="images/plant-1.png" alt="" />
+            <div class="flex items-end">
+              <div class="w-28 md:w-40">
+                <img src="images/plant-1.png" alt="" />
+              </div>
+              <div class="ml-8 md:ml-0">
+                <h1 class="text-2xl font-semibold text-slate-100">Aloe vera</h1>
+                <p class="text-xl font-semibold text-orange-600">Shop now +</p>
+              </div>
             </div>
-            <div class="ml-8 md:ml-0">
-              <h1 class="text-2xl text-slate-100 font-semibold">Aloe vera</h1>
-              <p class="text-xl text-orange-600 font-semibold">Shop now +</p>
-            </div>
-          </div>
 
-          <div class="flex items-end mt-8 md:mt-0">
-            <div class="w-24 md:w-32 ml-2 md:ml-4">
-              <img src="images/plant-2.png" alt="" />
+            <div class="mt-8 flex items-end md:mt-0">
+              <div class="ml-2 w-24 md:ml-4 md:w-32">
+                <img src="images/plant-2.png" alt="" />
+              </div>
+              <div class="ml-8 md:ml-0">
+                <h1 class="text-2xl font-semibold text-slate-100">Agave</h1>
+                <p class="text-xl font-semibold text-orange-600">Shop now +</p>
+              </div>
             </div>
-            <div class="ml-8 md:ml-0">
-              <h1 class="text-2xl text-slate-100 font-semibold">Agave</h1>
-              <p class="text-xl text-orange-600 font-semibold">Shop now +</p>
-            </div>
-          </div>
 
-          <div class="flex items-end mt-8 md:mt-0">
-            <div class="w-20 md:w-20 ml-4 md:ml-4">
-              <img src="images/plant-3.png" alt="" />
-            </div>
-            <div class="ml-8 md:ml-5">
-              <h1 class="text-2xl text-slate-100 font-semibold">
-                Echinopsis
-              </h1>
-              <p class="text-xl text-orange-600 font-semibold">Shop now +</p>
+            <div class="mt-8 flex items-end md:mt-0">
+              <div class="ml-4 w-20 md:ml-4 md:w-20">
+                <img src="images/plant-3.png" alt="" />
+              </div>
+              <div class="ml-8 md:ml-5">
+                <h1 class="text-2xl font-semibold text-slate-100">
+                  Echinopsis
+                </h1>
+                <p class="text-xl font-semibold text-orange-600">Shop now +</p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-  </div>
+      </section>
+    </div>
 
-  <div id="modal" tabindex="-1"
-    class="hidden overflow-y-auto overflow-x-hidden h-screen md:h-full fixed top-0 right-0 left-0 z-40 md:inset-0 h-modal  backdrop-blur-sm bg-black/20">
-    <div class="relative p-4 w-full max-w-md h-full md:h-auto m-auto top-[10%]">
-      <div class="relative bg-white rounded-lg shadow">
-        <button type="button"
-          class="btn-close-modal absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center z-50"
-          data-modal-toggle="popup-modal">
-          <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd"
-              d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-              clip-rule="evenodd"></path>
-          </svg>
-          <span class="sr-only">Close modal</span>
-        </button>
-        <div class="p-6 text-center">
-          <lottie-player src="json/contact-us.json" background="transparent" speed="1"
-            style="width: 300px; height: 300px" bounce loop autoplay class="m-auto"></lottie-player>
+    <div
+      id="modal"
+      tabindex="-1"
+      class="h-modal fixed top-0 right-0 left-0 z-40 hidden h-screen overflow-y-auto overflow-x-hidden bg-black/20 backdrop-blur-sm md:inset-0 md:h-full"
+    >
+      <div
+        class="relative top-[10%] m-auto h-full w-full max-w-md p-4 md:h-auto"
+      >
+        <div class="relative rounded-lg bg-white shadow">
+          <button
+            type="button"
+            class="btn-close-modal absolute top-3 right-2.5 z-50 ml-auto inline-flex items-center rounded-lg bg-transparent p-1.5 text-sm text-gray-400 hover:bg-gray-200 hover:text-gray-900"
+            data-modal-toggle="popup-modal"
+          >
+            <svg
+              aria-hidden="true"
+              class="h-5 w-5"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+            <span class="sr-only">Close modal</span>
+          </button>
+          <div class="p-6 text-center">
+            <lottie-player
+              src="json/contact-us.json"
+              background="transparent"
+              speed="1"
+              style="width: 300px; height: 300px"
+              bounce
+              loop
+              autoplay
+              class="m-auto"
+            ></lottie-player>
 
-          <div>
-            <h1 class="text-xl font-semibold text-slate-700">Contact us for hire</h1>
-          </div>
+            <div>
+              <h1 class="text-xl font-semibold text-slate-700">
+                Contact us for hire
+              </h1>
+            </div>
 
-          <div class="mt-2 flex justify-center gap-x-4">
-            <a href="https://instagram.com/yusufsryd" target="_blank" class="cursor-pointer hover:scale-125 duration-300">
-              <i class="fa-brands fa-instagram text-slate-600 text-3xl"></i>
-            </a>
+            <div class="mt-2 flex justify-center gap-x-4">
+              <a
+                href="https://instagram.com/yusufsryd"
+                target="_blank"
+                class="cursor-pointer duration-300 hover:scale-125"
+              >
+                <i class="fa-brands fa-instagram text-3xl text-slate-600"></i>
+              </a>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <script src="js/lottie.js"></script>
+    <script src="js/lottie.js"></script>
 
-  <script src="js/jquery.js"></script>
-  <script>
-    $(".btn-close-modal").click(function () {
-      $("#modal").addClass("hidden");
-    });
+    <script src="js/jquery.js"></script>
+    <script>
+      $(".btn-close-modal").click(function () {
+        $("#modal").addClass("hidden");
+      });
 
-    setTimeout(function () {
-      $("#modal").removeClass("hidden");
-    }, 10000);
-  </script>
+      setTimeout(function () {
+        $("#modal").removeClass("hidden");
+      }, 10000);
+    </script>
 
-  <script src="js/gsap.js"></script>
-  <script src="js/text-plugin-gsap.js"></script>
-  <script>
-    gsap.registerPlugin(TextPlugin);
-    gsap.to(".desc-title", {
-      duration: 3,
-      text: `Lorem ipsum dolor sit amet consectetur <br />
+    <script src="js/gsap.js"></script>
+    <script src="js/text-plugin-gsap.js"></script>
+    <script>
+      gsap.registerPlugin(TextPlugin);
+      gsap.to(".desc-title", {
+        duration: 3,
+        text: `Lorem ipsum dolor sit amet consectetur <br />
                 adipisicing elit. Asperiores nihil sint ut <br />
                 praesentium corporis.`,
-      ease: "power1.out",
-    });
+        ease: "power1.out",
+      });
 
-    gsap.from(".btn-buy", {
-      duration: 3,
-      delay: 2.8,
-      opacity: 0,
-    });
+      gsap.from(".btn-buy", {
+        duration: 3,
+        delay: 2.8,
+        opacity: 0,
+      });
 
-    gsap.from(".btn-learn", {
-      duration: 2,
-      delay: 3.2,
-      opacity: 0,
-    });
+      gsap.from(".btn-learn", {
+        duration: 2,
+        delay: 3.2,
+        opacity: 0,
+      });
 
-    gsap.from(".main-img", {
-      duration: 2,
-      y: "-20%",
-      opacity: 0,
-      ease: "power1.out",
-    });
+      gsap.from(".main-img", {
+        duration: 2,
+        y: "-20%",
+        opacity: 0,
+        ease: "power1.out",
+      });
 
-    gsap.from("#sunlight", {
-      duration: 1,
-      x: "20%",
-      opacity: 0,
-      ease: "power1.out",
-    });
+      gsap.from("#sunlight", {
+        duration: 1,
+        x: "20%",
+        opacity: 0,
+        ease: "power1.out",
+      });
 
-    gsap.from("#Humidity", {
-      duration: 1,
-      delay: 0.5,
-      x: "20%",
-      opacity: 0,
-      ease: "power1.out",
-    });
+      gsap.from("#Humidity", {
+        duration: 1,
+        delay: 0.5,
+        x: "20%",
+        opacity: 0,
+        ease: "power1.out",
+      });
 
-    gsap.from("#Watering", {
-      duration: 1,
-      delay: 1,
-      x: "20%",
-      opacity: 0,
-      ease: "power1.out",
-    });
-  </script>
-</body>
-
+      gsap.from("#Watering", {
+        duration: 1,
+        delay: 1,
+        x: "20%",
+        opacity: 0,
+        ease: "power1.out",
+      });
+    </script>
+  </body>
 </html>
